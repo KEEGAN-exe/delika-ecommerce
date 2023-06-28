@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div
+  class="bg-zinc-50 w-[70%] sm:w-[58%] dark:bg-zinc-900 md:w-[35%] xl:w-[20%]"
+>
+  <div
+    class="flex h-screen flex-col py-16 ml-[-200px] transition-all duration-300"
+    id="cont"
+  >
+    <form
+      action="login"
+      method="post"
+      class="flex-col flex w-full gap-4 px-6 flex-grow"
+      id="formulario"
+    >
+      <label for="" class="dark:text-white">Usuario</label>
+      <input
+        type="text"
+        class="bg-zinc-100 py-[7px] px-2 outline-none focus:border-indigo-500 border-2 transition-all duration-300 rounded-md dark:bg-zinc-800 dark:border-zinc-800 dark:focus:border-indigo-500 dark:text-stone-300"
+        id="user"
+        required
+      />
+      <label for="" class="dark:text-white">Contraseña</label>
+      <div class="flex items-center justify-between">
+        <input
+          type="password"
+          class="bg-zinc-100 py-[7px] px-2 outline-none focus:border-indigo-500 border-2 transition-all duration-300 rounded-md dark:bg-zinc-800 dark:border-zinc-800 dark:focus:border-indigo-500 dark:text-stone-300 w-[92%]"
+          id="pass"
+          required
+        />
+        <div
+          class="flex items-center h-full cursor-pointer dark:text-stone-50 text-xs"
+          id="viewpass1"
+        >
+          <i class="fa-regular fa-eye-slash"></i>
+        </div>
+      </div>
+
+      <label
+        for=""
+        class="dark:text-white hidden transition-all duration-300"
+        id="confirmarLabel">Confirmar contraseña</label
+      >
+      <div class="flex items-center justify-between">
+        <input
+          type="password"
+          class="bg-zinc-100 py-[7px] px-2 outline-none focus:border-indigo-500 border-2 transition-all duration-300 rounded-md dark:bg-zinc-800 dark:border-zinc-800 dark:focus:border-indigo-500 dark:text-stone-300 w-[92%] hidden"
+          id="confirmarPass"
+          required
+        />
+        <div
+          class="items-center hidden h-full dark:text-stone-50 text-xs"
+          id="viewpass2"
+        >
+          <i class="fa-regular fa-eye-slash cursor-pointer"></i>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end">
+        <p
+          class="text-indigo-500 font-medium text-sm cursor-pointer"
+          id="crearUsuario"
+        >
+          Crear Cuenta
+        </p>
+      </div>
+      <button
+        class="text-stone-50 p-2 rounded-md w-full ml-[0px] bg-indigo-500 dark:hover:brightness-110 hover:brightness-90 duration-300"
+        id="ingresar"
+        type="submit">Ingresar</button
+      >
+    </form>
+    <div class="relative flex items-center justify-center w-full h-[300px]">
+    </div>
+  </div>
+</div>
+<script src="../login.js"></script>

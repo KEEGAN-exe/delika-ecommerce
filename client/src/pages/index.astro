@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Login from '../components/Login.astro';
 import { Icon } from 'astro-icon';
 ---
 
@@ -31,4 +32,30 @@ import { Icon } from 'astro-icon';
 		</nav>
 	</div>
 </Layout>
+<div class="w-0 transition-all duration-300 fixed top-[64px]" id="login">
+	<Login />
+</div>
+
+<script>
+	const bars = document.getElementById('bars');
+	const login = document.getElementById('login');
+	const cont = document.getElementById('cont');
+	const iniciar = document.getElementById('iniciar');
+	const prueba = document.getElementById('prueba');
+	bars.addEventListener('click', () => {
+		login.classList.toggle('w-0');
+		login.classList.toggle('w-[100%]');
+		cont.classList.toggle('ml-0');
+		cont.classList.toggle('ml-[-200px]');
+	});
+
+	iniciar.addEventListener('click', () => {
+		login.classList.toggle('w-0');
+		login.classList.toggle('w-[100%]');
+		cont.classList.toggle('ml-0');
+		cont.classList.toggle('ml-[-200px]');
+	});
+
+</script>
+
 
