@@ -12,6 +12,23 @@ const viewpass1 = document.querySelector("#viewpass1");
 const viewpass2 = document.querySelector("#viewpass2");
 const iconElement = document.querySelector("#viewpass2 i");
 const iconElement2 = document.querySelector("#viewpass1 i");
+const userContainer = document.querySelector("#userContainer");
+const userImage = document.querySelector("#userImage");
+const userAlias = document.querySelector("#userAlias");
+const logout = document.querySelector("#logout");
+const login = document.getElementById("login");
+const cont = document.getElementById("cont");
+
+if (localStorage.getItem("user").length > 0) {
+  const list = JSON.parse(localStorage.getItem("user"));
+  iniciar.classList.toggle("hidden");
+  userContainer.classList.toggle("hidden");
+  userContainer.classList.toggle("flex");
+  const userNombre = list.username;
+  const userIMG = list.image;
+  userImage.src = userIMG;
+  userAlias.innerHTML = userNombre;
+}
 
 viewpass2.addEventListener("click", () => {
   confirmarPass.type = confirmarPass.type == "password" ? "text" : "password";
@@ -29,7 +46,7 @@ const data = await listUser();
 
 export const agregarUsuario = (newUser) => {
   data.push(newUser);
-}
+};
 console.log(data);
 
 let bol = true;
@@ -60,14 +77,27 @@ crearUsuario.addEventListener("click", () => {
   }
 });
 
+
+
 ingresar.addEventListener("click", (e) => {
   e.preventDefault();
   if (bol) {
+    const loginUsuario = data.find(
+      (e) => e.username == user.value && e.password == pass.value
+    );
     e.preventDefault();
-    if (
-      data.find((e) => e.username == user.value && e.password == pass.value)
-    ) {
-      alerta("success", "Bienvenido");
+    if (loginUsuario) {
+      alerta("success", `Bienvenido ${loginUsuario.username}`);
+      localStorage.setItem("user", JSON.stringify(loginUsuario));
+      const list = JSON.parse(localStorage.getItem("user"));
+      //console.log(list.password)
+      console.log(localStorage.getItem("user").length);
+      console.log(localStorage.getItem("user"));
+      const userID = loginUsuario.id;
+      const userNombre = list.username;
+      const userIMG = list.image;
+      userImage.src = userIMG;
+      userAlias.innerHTML = userNombre;
       crearUsuario.classList.remove("animate-bounce");
       user.classList.add("dark:border-zinc-800");
       pass.classList.add("dark:border-zinc-800");
@@ -80,6 +110,13 @@ ingresar.addEventListener("click", (e) => {
       confirmarPass.classList.remove("border-red-500");
       console.log("Ingresando");
       limpiar();
+      iniciar.classList.toggle("hidden");
+      login.classList.toggle("w-0");
+      login.classList.toggle("w-[100%]");
+      cont.classList.toggle("ml-0");
+      cont.classList.toggle("ml-[-200px]");
+      userContainer.classList.toggle("hidden");
+      userContainer.classList.toggle("flex");
     } else {
       alerta("error", "Usuario no encontrado");
       crearUsuario.classList.add("animate-bounce");
@@ -113,7 +150,6 @@ ingresar.addEventListener("click", (e) => {
           alerta("error", "Error al crear usuario");
         });
 
-      //agregar usuario a la api
       user.classList.add("dark:border-zinc-800");
       pass.classList.add("dark:border-zinc-800");
       user.classList.remove("dark:border-red-500");
@@ -150,6 +186,15 @@ ingresar.addEventListener("click", (e) => {
       limpiar();
     }
   }
+});
+
+logout.addEventListener("click", (e) => {
+  userImage.src = "";
+  userAlias.innerHTML = "";
+  iniciar.classList.toggle("hidden");
+  userContainer.classList.toggle("hidden");
+  userContainer.classList.toggle("flex");
+  localStorage.setItem("user", "");
 });
 
 user.addEventListener("change", () => {
