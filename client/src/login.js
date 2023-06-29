@@ -1,6 +1,6 @@
-/*import Swal from "sweetalert2";
-import "../pop-up.css";
-import { listUser, createUser } from "../services/person.service";*/
+import Swal from "sweetalert2";
+import "./pop-up.css";
+import { listUser, createUser } from "./service/person.service";
 
 const user = document.querySelector("#user");
 const pass = document.querySelector("#pass");
@@ -25,14 +25,204 @@ viewpass1.addEventListener("click", () => {
   iconElement2.classList.toggle("fa-eye");
 });
 
+const data = await listUser();
+
+export const agregarUsuario = (newUser) => {
+  data.push(newUser);
+}
+console.log(data);
+
 let bol = true;
+const content = ["Ingresar", "Crear Usuario"];
 
 crearUsuario.addEventListener("click", () => {
   bol = !bol;
+  user.classList.add("dark:border-zinc-800");
+  pass.classList.add("dark:border-zinc-800");
+  confirmarPass.classList.add("dark:border-zinc-800");
+  user.classList.remove("dark:border-red-500");
+  pass.classList.remove("dark:border-red-500");
+  confirmarPass.classList.remove("dark:border-red-500");
+  user.classList.remove("border-red-500");
+  pass.classList.remove("border-red-500");
   confirmarPass.classList.remove("border-red-500");
   crearUsuario.classList.remove("animate-bounce");
   confirmarLabel.classList.toggle("hidden");
   confirmarPass.classList.toggle("hidden");
   viewpass2.classList.toggle("hidden");
   viewpass2.classList.toggle("flex");
+  if (ingresar.innerHTML == content[0]) {
+    crearUsuario.innerHTML = content[0];
+    ingresar.innerHTML = content[1];
+  } else {
+    ingresar.innerHTML = content[0];
+    crearUsuario.innerHTML = content[1];
+  }
 });
+
+ingresar.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (bol) {
+    e.preventDefault();
+    if (
+      data.find((e) => e.username == user.value && e.password == pass.value)
+    ) {
+      alerta("success", "Bienvenido");
+      crearUsuario.classList.remove("animate-bounce");
+      user.classList.add("dark:border-zinc-800");
+      pass.classList.add("dark:border-zinc-800");
+      user.classList.remove("dark:border-red-500");
+      pass.classList.remove("dark:border-red-500");
+      user.classList.remove("border-red-500");
+      pass.classList.remove("border-red-500");
+      confirmarPass.classList.add("dark:border-zinc-800");
+      confirmarPass.classList.remove("dark:border-red-500");
+      confirmarPass.classList.remove("border-red-500");
+      console.log("Ingresando");
+      limpiar();
+    } else {
+      alerta("error", "Usuario no encontrado");
+      crearUsuario.classList.add("animate-bounce");
+      user.classList.add("border-red-500");
+      pass.classList.add("border-red-500");
+      user.classList.remove("dark:border-zinc-800");
+      pass.classList.remove("dark:border-zinc-800");
+      user.classList.add("dark:border-red-500");
+      pass.classList.add("dark:border-red-500");
+      confirmarPass.classList.remove("dark:border-zinc-800");
+      confirmarPass.classList.add("dark:border-red-500");
+      confirmarPass.classList.add("border-red-500");
+      limpiar();
+    }
+  } else {
+    e.preventDefault();
+    if (
+      confirmarPass.value === pass.value &&
+      user.value != "" &&
+      pass.value != ""
+    ) {
+      const imagen = generateImage();
+      const usuario = document.querySelector("#user").value;
+      const contra = document.querySelector("#pass").value;
+      e.preventDefault();
+      registrar(usuario, contra, imagen)
+        .then((res) => {
+          alerta("success", "Usuario creado correctamente");
+        })
+        .catch((err) => {
+          alerta("error", "Error al crear usuario");
+        });
+
+      //agregar usuario a la api
+      user.classList.add("dark:border-zinc-800");
+      pass.classList.add("dark:border-zinc-800");
+      user.classList.remove("dark:border-red-500");
+      pass.classList.remove("dark:border-red-500");
+      confirmarPass.classList.add("dark:border-zinc-800");
+      confirmarPass.classList.remove("dark:border-red-500");
+      confirmarPass.classList.remove("border-red-500");
+      user.classList.remove("border-red-500");
+      pass.classList.remove("border-red-500");
+      limpiar();
+      crearUsuario.classList.remove("animate-bounce");
+      confirmarLabel.classList.toggle("hidden");
+      confirmarPass.classList.toggle("hidden");
+      viewpass2.classList.toggle("hidden");
+      viewpass2.classList.toggle("flex");
+      if (ingresar.innerHTML == content[0]) {
+        crearUsuario.innerHTML = content[0];
+        ingresar.innerHTML = content[1];
+      } else {
+        ingresar.innerHTML = content[0];
+        crearUsuario.innerHTML = content[1];
+      }
+      bol = !bol;
+    } else {
+      user.classList.add("border-red-500");
+      pass.classList.add("border-red-500");
+      user.classList.remove("dark:border-zinc-800");
+      pass.classList.remove("dark:border-zinc-800");
+      confirmarPass.classList.remove("dark:border-zinc-800");
+      confirmarPass.classList.add("border-red-500");
+      user.classList.add("dark:border-red-500");
+      pass.classList.add("dark:border-red-500");
+      confirmarPass.classList.add("dark:border-red-500");
+      limpiar();
+    }
+  }
+});
+
+user.addEventListener("change", () => {
+  user.classList.add("dark:border-zinc-800");
+  pass.classList.add("dark:border-zinc-800");
+  user.classList.remove("dark:border-red-500");
+  pass.classList.remove("dark:border-red-500");
+  confirmarPass.classList.add("dark:border-zinc-800");
+  confirmarPass.classList.remove("dark:border-red-500");
+  confirmarPass.classList.remove("border-red-500");
+  user.classList.remove("border-red-500");
+  pass.classList.remove("border-red-500");
+});
+
+pass.addEventListener("change", () => {
+  user.classList.add("dark:border-zinc-800");
+  pass.classList.add("dark:border-zinc-800");
+  user.classList.remove("dark:border-red-500");
+  pass.classList.remove("dark:border-red-500");
+  confirmarPass.classList.add("dark:border-zinc-800");
+  confirmarPass.classList.remove("dark:border-red-500");
+  confirmarPass.classList.remove("border-red-500");
+  user.classList.remove("border-red-500");
+  pass.classList.remove("border-red-500");
+});
+
+const registrar = async (usuario, password, imagen) => {
+  try {
+    const result = await createUser(data.length + 1, usuario, password, imagen);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+function limpiar() {
+  user.value = "";
+  pass.value = "";
+  confirmarPass.value = "";
+  user.focus();
+}
+
+function generateImage() {
+  const usuario = document.querySelector("#user").value;
+  const page = "https://robohash.org/";
+  const id = data.length + 1;
+  return `${page}${usuario}${id}`;
+}
+
+export function alerta(icono, message) {
+  let bg;
+  if (icono == "error") {
+    bg = "#f87171";
+  } else {
+    bg = "#A5DC86";
+  }
+  const Toast = Swal.mixin({
+    toast: true,
+    showConfirmButton: false,
+    background: bg,
+    position: "top-end",
+    timer: 2000,
+    timerProgressBar: true,
+    customClass: {
+      container: "custom-container",
+      popup: "custom-popup",
+    },
+  });
+
+  Toast.fire({
+    icon: icono,
+    iconColor: "white",
+    title: message,
+    color: "white",
+  });
+}
