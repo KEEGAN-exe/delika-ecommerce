@@ -18,8 +18,10 @@ const userAlias = document.querySelector("#userAlias");
 const logout = document.querySelector("#logout");
 const login = document.getElementById("login");
 const cont = document.getElementById("cont");
+const bars = document.getElementById("bars");
+const movileContainer = document.getElementById("movileContainer");
 
-if (localStorage.getItem("user").length > 0) {
+if (localStorage.getItem("user").length > 1) {
   const list = JSON.parse(localStorage.getItem("user"));
   iniciar.classList.toggle("hidden");
   userContainer.classList.toggle("hidden");
@@ -28,6 +30,15 @@ if (localStorage.getItem("user").length > 0) {
   const userIMG = list.image;
   userImage.src = userIMG;
   userAlias.innerHTML = userNombre;
+  if(window.innerWidth <= 640){
+    bars.classList.add("hidden");
+    movileContainer.classList.remove("hidden");
+  }
+}if(localStorage.getItem("user").length == 0){
+  if(window.innerWidth <= 640){
+    bars.classList.remove("hidden");
+    movileContainer.classList.add("hidden");
+  }
 }
 
 viewpass2.addEventListener("click", () => {
@@ -90,7 +101,6 @@ ingresar.addEventListener("click", (e) => {
       alerta("success", `Bienvenido ${loginUsuario.username}`);
       localStorage.setItem("user", JSON.stringify(loginUsuario));
       const list = JSON.parse(localStorage.getItem("user"));
-      //console.log(list.password)
       console.log(localStorage.getItem("user").length);
       console.log(localStorage.getItem("user"));
       const userID = loginUsuario.id;
@@ -117,6 +127,10 @@ ingresar.addEventListener("click", (e) => {
       cont.classList.toggle("ml-[-200px]");
       userContainer.classList.toggle("hidden");
       userContainer.classList.toggle("flex");
+      if(window.innerWidth <= 640){
+        bars.classList.toggle("hidden");
+        movileContainer.classList.remove("hidden");
+      }
     } else {
       alerta("error", "Usuario no encontrado");
       crearUsuario.classList.add("animate-bounce");
@@ -195,6 +209,10 @@ logout.addEventListener("click", (e) => {
   userContainer.classList.toggle("hidden");
   userContainer.classList.toggle("flex");
   localStorage.setItem("user", "");
+  if(window.innerWidth <= 640){
+    bars.classList.toggle("hidden");
+    movileContainer.classList.add("hidden");
+  }
 });
 
 user.addEventListener("change", () => {
