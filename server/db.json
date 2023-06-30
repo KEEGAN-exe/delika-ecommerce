@@ -97,10 +97,254 @@
       "image": "https://robohash.org/admin16"
     }
   ],
+  "category": [
+    {
+      "id": 1,
+      "name": "smartphone",
+      "image": "https://cdn.shopify.com/s/files/1/0269/1013/0275/products/dd53b963c56d17a26d49181840ca6099_grande.png?v=1646489914"
+    },
+    {
+      "id": 2,
+      "name": "auriculares",
+      "image": "https://www.jbl.com.pe/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8436972d/1.JBL_TUNE_710BT_Product%20Image_Hero_Black.png?sw=537&sfrm=png"
+    },
+    {
+      "id": 3,
+      "name": "teclado",
+      "image": "https://primary.jwwb.nl/public/p/u/x/temp-vukvrrorfqjhgfxhteif/1kfrul/minerva-ic-ig-3.png?enable-io=true&enable=upscale&fit=cover&width=537&height=362"
+    },
+    {
+      "id": 4,
+      "name": "mouse",
+      "image": "https://i0.wp.com/gadgerss.com/wp-content/uploads/2019/01/Mouse_A_white.jpg?resize=537%2C537&ssl=1"
+    },
+    {
+      "id": 5,
+      "name": "procesador",
+      "image": "https://cf.shopee.com.my/file/sg-11134201-23020-x6v0z88hobnv23"
+    },
+    {
+      "id": 6,
+      "name": "grafica",
+      "image": "https://www.ubuy.ec/productimg/?image=aHR0cHM6Ly9pNS53YWxtYXJ0aW1hZ2VzLmNvbS9hc3IvNmU3YTI5ZmQtNmQxZS00ZTczLWI0YzQtODk3NzRmZjdkN2JmLmJkNzQ1ZjJlMWI2MzEzOTA3OTE0NjI2YmNjNDcyYmQ5LmpwZWc.jpg"
+    }
+  ],
   "product": [
     {
       "id": 1,
-      "name": "Apple"
+      "name": "Galaxy M13 128GB",
+      "price": 1000,
+      "image": "https://storage.comprasmartphone.com/smartphones/samsung-galaxy-m13.png",
+      "category": "smartphone",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/01/samsung-logo-7.png"
+    },
+    {
+      "id": 2,
+      "name": "Kurama K552",
+      "price": 1000,
+      "image": "https://redragon.es/content/uploads/2021/04/KUMARA.png",
+      "category": "teclado",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 3,
+      "name": "Huawei P60 PRO 128GB",
+      "price": 2500,
+      "image": "https://shop-cdncname.huawei.com/mx/uomcdn/MXHW/pms/202304/gbom/6941487294589/428_428_547D90F0945B511C50C793AEDD7B7F8Fmp.png",
+      "category": "smartphone",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2016/09/huawei-logo-0.png"
+    },
+    {
+      "id": 4,
+      "name": "OPPO Find N2 Flip",
+      "price": 4000,
+      "image": "https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/find-n2-flip-en/no-silk-screen/navigation/find-n2-flip-purple_440_440.png.thumb.webp",
+      "category": "smartphone",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2021/03/oppo-logo-0.png"
+    },
+    {
+      "id": 5,
+      "name": "Vivo X90 Pro",
+      "price": 3800,
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2023/02/Vivo-X90.png?tr=q-100",
+      "category": "smartphone",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2021/03/vivo-smartphones-logo-0.png"
+    },
+    {
+      "id": 6,
+      "name": "DragonBorn K630",
+      "price": 250,
+      "image": "https://redragon.es/content/uploads/2021/07/DRAGONBORN.png",
+      "category": "teclado",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 7,
+      "name": "K552RGB-BA-W-SP",
+      "price": 199,
+      "image": "https://redragon.es/content/uploads/2021/10/K552-RGB-BA-WHITE-SP.png",
+      "category": "teclado",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 8,
+      "name": "HARPE PRO K203A RGB",
+      "price": 345,
+      "image": "https://redragon.es/content/uploads/2021/04/HARPE-PRO.png",
+      "category": "teclado",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 9,
+      "name": "DITI K585",
+      "price": 455,
+      "image": "https://redragon.es/content/uploads/2021/04/DITI.png",
+      "category": "teclado",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 10,
+      "name": "i9-7980xe",
+      "price": 3999,
+      "image": "https://e7.pngegg.com/pngimages/9/245/png-clipart-intel-core-i9-7980xe-extreme-edition-processor-2-6ghz-24-75mb-smart-cache-box-processor-lga-2066-gulftown-intel-purple-violet.png",
+      "category": "procesador",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png"
+    },
+    {
+      "id": 11,
+      "name": "i3-10100 3.6GHz",
+      "price": 799,
+      "image": "https://electronicstore.com.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/3/4/34645654.png",
+      "category": "procesador",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png"
+    },
+    {
+      "id": 12,
+      "name": "i7-10700K 3.8GHz",
+      "price": 999,
+      "image": "https://electronicstore.com.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/1/5/1545346.png",
+      "category": "procesador",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png"
+    },
+    {
+      "id": 13,
+      "name": "Ryzen 5 7600X 4.70GHz",
+      "price": 799,
+      "image": "https://pcexpress.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/1/5/1536834-amd-ryzen-5-7000-series-pib-angle-1260x709.png",
+      "category": "procesador",
+      "marcaImg" : "https://logospng.org/download/ryzen/ryzen-4096.png"
+    },
+    {
+      "id": 14,
+      "name": "G435 LightSpeed",
+      "price": 599,
+      "image": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/8/981-001049_3.png",
+      "category": "auriculares",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo-24.png"
+    },
+    {
+      "id": 15,
+      "name": "Cloud FLight Wireless",
+      "price": 399,
+      "image": "https://i0.wp.com/www.sispar.com.py/imagenes/70300.png?fit=1000%2C1000&ssl=1",
+      "category": "auriculares",
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+    },
+    {
+      "id": 16,
+      "name": "Cloud Stinger Core",
+      "price": 499,
+      "image": "https://logg.api.cygnus.market/static/logg/Global/Auricular%20HyperX%20Cloud%20Stinger%20PS4/ab2d78c02fdf4915a836d13858a5d438.png",
+      "category": "auriculares",
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+    },
+    {
+      "id": 17,
+      "name": "STRIX GO CORE",
+      "price": 399,
+      "image": "https://dlcdnwebimgs.asus.com/files/media/766FF774-FD72-4BF6-B35C-6821E1AB0322/v4/img/pd_wireless_23_01.png",
+      "category": "auriculares",
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+    },
+    {
+      "id": 18,
+      "name": "Ryzen 5 7600X 4.70GHz",
+      "price": 799,
+      "image": "https://pcexpress.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/1/5/1536834-amd-ryzen-5-7000-series-pib-angle-1260x709.png",
+      "category": "procesador",
+      "marcaImg" : "https://logospng.org/download/ryzen/ryzen-4096.png"
+    },
+    {
+      "id": 19,
+      "name": "Pandora H350W",
+      "price": 179,
+      "image": "https://promart.vteximg.com.br/arquivos/ids/6836920-1000-1000/image-f8bdb643f0fc466dbf6ecbb0e8c72f2f.jpg?v=638144950337770000",
+      "category": "auriculares",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 20,
+      "name": "G403 HERO",
+      "price": 179,
+      "image": "https://logitechar.vtexassets.com/arquivos/ids/157169/910-005631-1.png?v=637073544969270000",
+      "category": "mouse",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo-24.png"
+    },
+    {
+      "id": 21,
+      "name": "Pulsefire core",
+      "price": 299,
+      "image": "https://res.cloudinary.com/itcity-production/image/upload/f_png,q_80,w_1000/v1652156977/products/PRD202205001339/skus/ixyg4hcimwgxe2rpy0e3.png",
+      "category": "mouse",
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+    },
+    {
+      "id": 22,
+      "name": "Cobra M711",
+      "price": 190,
+      "image": "https://oechsle.vteximg.com.br/arquivos/ids/2763135-1000-1000/image-2817de607ac24a07ae4afc8c613be33a.jpg?v=637495000107900000",
+      "category": "mouse",
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+    },
+    {
+      "id": 23,
+      "name": "STRIX IMPACT II",
+      "price": 179,
+      "image": "https://dreamyshopcy.com/image/cache/catalog/dreamyshopcy/Store/All_Photos/ASUS_RogStrix_ImpactII_1-1000x1000.png",
+      "category": "mouse",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png"
+    },
+    {
+      "id": 24,
+      "name": "GTX 1050Ti",
+      "price": 999,
+      "image": "https://www.asus.com/media/global/products/nxI87cotd56xmqsi/P_setting_xxx_0_90_end_692.png",
+      "category": "grafica",
+      "marcaImg":"https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png"
+    },
+    {
+      "id": 25,
+      "name": "GTX 1070",
+      "price": 1199,
+      "image": "https://www.asus.com/media/global/products/HAhTZhqAkxEtO1dV/P_setting_xxx_0_90_end_692.png",
+      "category": "grafica",
+      "marcaImg":"https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png"
+    },
+    {
+      "id": 26,
+      "name": "GT 1030",
+      "price": 999,
+      "image": "https://www.asus.com/media/global/products/ItDsYmA7eQYlnX99/P_setting_xxx_0_90_end_692.png",
+      "category": "grafica",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png"
+    },
+    {
+      "id": 27,
+      "name": "GTX 1660",
+      "price": 1199,
+      "image": "https://www.asus.com/media/global/products/mzmUNAVWsuLiQmZA/P_setting_xxx_0_90_end_692.png",
+      "category": "grafica",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png"
     }
   ]
 }
