@@ -1,0 +1,19 @@
+---
+import CategoryCard from "./CategoryCard.astro";
+
+---
+
+<div class="my-6 flex items-center justify-between px-4 lg:px-32">
+  <div class="border-b-2 border-indigo-500">
+    <h1 class="font-medium mb-2 lg:text-lg text-sm dark:text-stone-50">Las <b class="font-medium text-sm lg:text-lg text-indigo-500">categorias </b> mas compradas</h1>
+  </div>
+  <div class="flex items-center gap-1 hover:scale-105 transition-all duration-300">
+    <a href="" class="text-sm dark:text-stone-50">Ver todo</a>
+    <div class="text-indigo-500 ">
+      <i class="fa-solid fa-greater-than fa-2xs"></i>
+    </div>
+  </div>
+</div>
+<div>
+  <CategoryCard />
+</div>
