@@ -203,14 +203,6 @@
       "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
     },
     {
-      "id": 10,
-      "name": "i9-7980xe",
-      "price": 3999,
-      "image": "https://e7.pngegg.com/pngimages/9/245/png-clipart-intel-core-i9-7980xe-extreme-edition-processor-2-6ghz-24-75mb-smart-cache-box-processor-lga-2066-gulftown-intel-purple-violet.png",
-      "category": "procesador",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png"
-    },
-    {
       "id": 11,
       "name": "i3-10100 3.6GHz",
       "price": 799,
