@@ -4,7 +4,12 @@
 >
 </div>
 
+
+
 <script>
+
+  // <i class="fa-solid fa-pen-to-square"></i> edit
+  // delete <i class="fa-solid fa-trash-can"></i>
   import { listCategory } from "../service/category.service";
 
   const categoryContainer = document.querySelector("#category-container");
@@ -13,17 +18,9 @@
 
   console.log(datos);
 
-  //quiero usar ternarias para cuadno categorya sea "" el valor cambia a "procesador" o "mouse" para que no de error
-  let category = "" ? "procesador" : "mouse";
-
-
   datos.forEach((dt) => {
     const card = document.createElement("div");
     card.classList.add("flex", "items-center", "flex-col", "gap-4","cursor-pointer");
-
-    card.addEventListener("click", () => {
-      category = dt.name;
-    });
 
     const img = document.createElement("img");
     img.classList.add(
@@ -43,104 +40,6 @@
     card.appendChild(title);
 
     categoryContainer.appendChild(card);
-  });
-
-  import { listProduct } from "../service/product.service";
-
-  const cardContainer = document.getElementById("card-container");
-  const categoria = document.getElementById("categoria");
-
-  const data = await listProduct();
-
-  let indexCategory = "";
-
-  if(category == "procesador" || category == "mouse"){
-    indexCategory = category + "es";
-  }else{
-    indexCategory = category + "s";
-  }
-
-  const dataFilter = data.filter((product) => product.category === category);
-
-  dataFilter.forEach((product) => {
-    const card = document.createElement("div");
-    card.classList.add(
-      "bg-stone-100",
-      "rounded-xl",
-      "shadow-2xl",
-      "hover:scale-105",
-      "duration-300",
-      "transition-all",
-      "hover:shadow-xl"
-    );
-
-    const img = document.createElement("img");
-    img.classList.add("max-w-[350px]", "lg:max-w-[250px]");
-    img.src = product.image;
-    card.appendChild(img);
-
-    const details = document.createElement("div");
-    details.classList.add(
-      "bg-indigo-500",
-      "pt-2",
-      "pb-6",
-      "rounded-b-xl",
-      "text-white"
-    );
-
-    const logoContainer = document.createElement("div");
-    logoContainer.classList.add(
-      "bg-gray-100",
-      "w-[50%]",
-      "my-2",
-      "flex",
-      "items-center",
-      "justify-center",
-      "rounded-r-2xl"
-    );
-
-    const logo = document.createElement("img");
-    logo.classList.add("w-14");
-    logo.src = product.marcaImg;
-    logoContainer.appendChild(logo);
-    details.appendChild(logoContainer);
-
-    const title = document.createElement("h1");
-    title.classList.add("text-center", "text-lg");
-    title.innerText = product.name;
-    details.appendChild(title);
-
-    const priceSection = document.createElement("div");
-    priceSection.classList.add(
-      "flex",
-      "items-center",
-      "justify-evenly",
-      "mt-4"
-    );
-
-    const price = document.createElement("h2");
-    price.classList.add("text-center", "font-bold");
-    price.innerText = `$ ${product.price}`;
-    priceSection.appendChild(price);
-
-    const button = document.createElement("a");
-    button.classList.add(
-      "py-2",
-      "px-4",
-      "bg-neutral-50",
-      "rounded-lg",
-      "text-gray-900",
-      "cursor-pointer"
-    );
-    button.innerText = "Ver";
-    priceSection.appendChild(button);
-    button.addEventListener("click", () => {
-      console.log(product.id);
-    });
-
-    details.appendChild(priceSection);
-    card.appendChild(details);
-    cardContainer.appendChild(card);
   });
 
 </script>

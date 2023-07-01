@@ -1,6 +1,23 @@
 ---
 import Card from "./Card.astro";
 ---
+<div class="my-6 flex items-center justify-between px-4 lg:px-32">
+  <div class="border-b-2 border-indigo-500">
+    <h1 class="font-medium mb-2 lg:text-lg text-sm dark:text-stone-50">Nuestros Productos</h1>
+  </div>
+  <div class="flex items-center gap-1 hover:scale-105 transition-all duration-300">
+    <select id="pr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <option selected>Elige un producto para filtrar</option>
+      <option value="mouse">Mouses</option>
+      <option value="teclado">Teclados</option>
+      <option value="procesador">Procesadores</option>
+      <option value="grafica">Graficas</option>
+      <option value="auriculares">Auriculares</option>
+    </select>
+  </div>
+</div>
+
+
 
 <div>
   <Card/>
