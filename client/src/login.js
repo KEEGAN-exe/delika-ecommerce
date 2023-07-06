@@ -21,6 +21,7 @@ const cont = document.getElementById("cont");
 const bars = document.getElementById("bars");
 const movileContainer = document.getElementById("movileContainer");
 
+
 if (localStorage.getItem("user").length > 1) {
   const list = JSON.parse(localStorage.getItem("user"));
   iniciar.classList.toggle("hidden");
@@ -214,6 +215,7 @@ logout.addEventListener("click", (e) => {
     movileContainer.classList.add("hidden");
   }
 });
+
 
 user.addEventListener("change", () => {
   user.classList.add("dark:border-zinc-800");

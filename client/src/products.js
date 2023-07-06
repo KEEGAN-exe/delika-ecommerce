@@ -1,7 +1,19 @@
-import { listProduct } from "./service/product.service";
-
+import { findProductById, listProduct } from "./service/product.service";
+const nombre = document.getElementById("nombre");
+const precio = document.getElementById("precio");
+const image = document.getElementById("image");
+const categoria = document.getElementById("categoria");
+const marcaImg = document.getElementById("marcaImg");
+const close = document.getElementById("close");
+const actualizar = document.getElementById("actualizar");
+const updateContainer = document.getElementById("update-container");
 const cardContainer = document.getElementById("card-container");
 let producto = document.getElementById("pr");
+
+let buttonsCounter = 1;
+
+let id = 0;
+let buscarProducto;
 
 if (cardContainer.innerHTML.trim() === "") {
   const message = document.createElement("h1");
@@ -33,32 +45,8 @@ producto.addEventListener("change", async () => {
       (product) => product.category === producto.value
     );
 
-    /*
-      <div class="flex items-center my-10 gap-6 justify-center flex-wrap">
-        <div class="bg-stone-100 rounded-xl shadow-2xl hover:scale-105 duration-300 transition-all hover:shadow-xl relative"> 
-          <div class="flex items-center justify-end absolute gap-1 p-2 right-0">
-            <div class="bg-indigo-500 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-indigo-600">
-              <i class="fa-solid fa-pen-to-square text-white"></i>
-            </div>
-            <div class="bg-red-500 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-red-600">
-              <i class="fa-solid fa-trash-can text-white"></i>
-            </div>
-          </div>   
-          <img src="/samsung-galaxy-m13.png" class="max-w-[350px] lg:max-w-[250px]" />
-          <div class="bg-indigo-500 pt-2 pb-6 rounded-b-xl text-white">
-            <div class="bg-gray-100 w-[50%] my-2 flex items-center justify-center rounded-r-2xl">
-              <img src="https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png" alt="" class="w-14" id="logo">
-            </div>
-            <h1 class="text-center text-lg">Galaxy M13 (64GB)</h1>
-            <div class="flex items-center justify-evenly mt-4">
-              <h2 class="text-center  font-bold">₹ 12,999</h2>
-              <a href="" class="py-2 px-4 bg-neutral-50 rounded-lg text-gray-900">Ver</a>
-            </div>
-          </div>
-      </div>
-    </div>  */
-
     cardContainer.innerHTML = "";
+    buttonsCounter = 1;
 
     dataFilter.forEach((product) => {
       const card = document.createElement("div");
@@ -74,8 +62,9 @@ producto.addEventListener("change", async () => {
       );
 
       const buttons = document.createElement("div");
+      buttons.id = `buttons-${buttonsCounter}`;
       buttons.classList.add(
-        "flex",
+        "hidden",
         "items-center",
         "justify-end",
         "absolute",
@@ -143,7 +132,7 @@ producto.addEventListener("change", async () => {
         "flex",
         "items-center",
         "justify-center",
-        "rounded-r-2xl"
+        "rounded-r-xl"
       );
 
       const logo = document.createElement("img");
@@ -188,6 +177,32 @@ producto.addEventListener("change", async () => {
       details.appendChild(priceSection);
       card.appendChild(details);
       cardContainer.appendChild(card);
+
+      editButton.addEventListener("click", async () => {
+        const card = editButton.closest(".bg-stone-100");
+        const id = product.id;
+        console.log(id);
+        buscarProducto = await findProductById(id);
+        console.log(buscarProducto);
+      });
+
+      buttonsCounter++;
+
+      buttons.classList.add("hidden");
+      buttons.classList.remove("flex");
     });
+
+    if (localStorage.getItem("user")) {
+      for (let i = 1; i <= buttonsCounter; i++) {
+        const buttons = document.getElementById(`buttons-${i}`);
+        if (buttons) {
+          buttons.classList.remove("hidden");
+          buttons.classList.add("flex");
+        }
+      }
+    }
   }
 });
+
+
+export {buscarProducto}

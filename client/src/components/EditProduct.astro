@@ -1,0 +1,43 @@
+<div class="absolute w-full h-screen bg-zinc-50 shadow-2xl">
+  <div class="flex flex-col items-center justify-center w-full [&>input]:w-full px-14 py-10 gap-2 relative">
+    <label for="" class="text-start w-full">Nombre</label>
+    <input type="text" placeholder="name" id="nombre">
+    <label for="" class="text-start w-full">Precio</label>
+    <input type="text" placeholder="precio" id="precio">
+    <label for="" class="text-start w-full">ImagenUrl</label>
+    <input type="text" placeholder="imagen" id="image">
+    <label for="" class="text-start w-full">Categoria</label>
+    <select name="" id="categoria" class="w-full">
+      <option value="">Smartphone</option>
+      <option value="">auriculares</option>
+      <option value="">teclado</option>
+      <option value="">mouse</option>
+      <option value="">procesador</option>
+      <option value="">grafica</option>
+    </select>
+    <label for="" class="text-start w-full">MarcaImagenUrl</label>
+    <input type="text" placeholder="marcaImg" id="marcaImg">
+    <button class="w-full my-4 bg-indigo-500 text-white py-3 rounded-lg cursor-pointer" id="actualizar">Actualizar</button>
+    <div class="absolute top-5 right-5 text-red-500 hover:scale-110 duration-300 transition-all cursor-pointer" id="close">
+      <i class="fa-solid fa-xmark fa-xl"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  import {buscarProducto} from '../products.js'
+  
+  
+</script>
+
+{/*
+{
+      "id": 24,
+      "name": "GTX 1050Ti",
+      "price": 999,
+      "image": "https://www.asus.com/media/global/products/nxI87cotd56xmqsi/P_setting_xxx_0_90_end_692.png",
+      "category": "grafica",
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png"
+    },
+
+*/}

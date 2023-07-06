@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Login from '../components/Login.astro';
 import { Icon } from 'astro-icon';
+import EditProduct from '../components/EditProduct.astro';
 ---
 
 <Layout title="Delika - Ecommerce">
@@ -41,6 +42,10 @@ import { Icon } from 'astro-icon';
 </Layout>
 <div class="w-0 transition-all duration-300 fixed top-[64px]" id="login">
 	<Login />
+</div>
+
+<div class="w-3/4 lg:w-0 transition-all duration-300 fixed top-[70px] right-0" id="updateContainer">
+	<EditProduct/>
 </div>
 
 <script>
