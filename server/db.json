@@ -95,6 +95,12 @@
       "username": "admin",
       "password": "admin",
       "image": "https://robohash.org/admin16"
+    },
+    {
+      "id": 17,
+      "username": "pepin",
+      "password": "159",
+      "image": "https://robohash.org/pepin17"
     }
   ],
   "category": [
@@ -136,7 +142,8 @@
       "price": 1000,
       "image": "https://storage.comprasmartphone.com/smartphones/samsung-galaxy-m13.png",
       "category": "smartphone",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/01/samsung-logo-7.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/01/samsung-logo-7.png",
+      "descripcion": "El Samsung Galaxy M13 es un smartphone Android con una pantalla Full HD+ de 6.5 pulgadas. Potenciado por un procesador Exynos 9611 de ocho núcleos, el Galaxy M13 cuenta con variantes de 4GB de memoria RAM y 64GB de almacenamiento interno o 6GB de memoria RAM con 128GB de almacenamiento interno. La cámara posterior del Galaxy M13 es cuádruple, de 48 MP + 8 MP + 5 MP + 5 MP, mientras que su cámara para selfies es de 13 megapixels. Completando las características del Galaxy M13 encontramos una batería de 6000 mAh con carga rápida, lector de huellas posterior, puerto USB-C, y corre One UI 2.0 basado en Android 10."
     },
     {
       "id": 2,
@@ -144,7 +151,8 @@
       "price": 1000,
       "image": "https://redragon.es/content/uploads/2021/04/KUMARA.png",
       "category": "teclado",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion": "El Redragon K552 es un teclado mecánico compacto 60% con interruptores mecánicos Outemu Blue (haga clic en Blue). Es más pequeño que un teclado mecánico estándar, con todas las teclas necesarias para jugar. El K552 es resistente al agua y a las salpicaduras, con un diseño de teclas flotantes. No hay un teclado numérico, lo que también significa que es ideal para viajar y usar en espacios reducidos. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar."
     },
     {
       "id": 3,
@@ -152,15 +160,17 @@
       "price": 2500,
       "image": "https://shop-cdncname.huawei.com/mx/uomcdn/MXHW/pms/202304/gbom/6941487294589/428_428_547D90F0945B511C50C793AEDD7B7F8Fmp.png",
       "category": "smartphone",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2016/09/huawei-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2016/09/huawei-logo-0.png",
+      "descripcion": "El Huawei P60 Pro es un smartphone Android con una pantalla Full HD+ de 6.5 pulgadas. Potenciado por un procesador Kirin 980 de ocho núcleos, el Huawei P60 Pro cuenta con 8GB de memoria RAM y 128GB de almacenamiento interno expandible. La cámara posterior del Huawei P60 Pro es cuádruple, de 40 MP + 20 MP + 8 MP + TOF, mientras que su cámara para selfies es de 32 MP. Completando las características del Huawei P60 Pro encontramos una batería de 4200 mAh con carga rápida, lector de huellas integrado en pantalla, parlantes stereo, sonido HiFi, y corre EMUI 9.1 basado en Android 9.0 Pie."
     },
     {
       "id": 4,
       "name": "OPPO Find N2 Flip",
-      "price": 4000,
+      "price": 3500,
       "image": "https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/find-n2-flip-en/no-silk-screen/navigation/find-n2-flip-purple_440_440.png.thumb.webp",
       "category": "smartphone",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2021/03/oppo-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2021/03/oppo-logo-0.png",
+      "descripcion":"El OPPO Find N2 Flip es un smartphone Android con una pantalla Full HD+ de 6.5 pulgadas. Potenciado por un procesador Snapdragon 888 de Qualcomm, el OPPO Find N2 Flip cuenta con 8GB de memoria RAM y 128GB de almacenamiento interno. La cámara posterior del OPPO Find N2 Flip es triple, de 50 MP + 13 MP + 5 MP, mientras que su cámara para selfies es de 32 MP. Completando las características del OPPO Find N2 Flip encontramos una batería de 4500 mAh con carga rápida, lector de huellas integrado en pantalla, parlantes stereo, sonido HiFi, y corre ColorOS 12 basado en Android 12."
     },
     {
       "id": 5,
@@ -168,7 +178,8 @@
       "price": 3800,
       "image": "https://www.91-cdn.com/hub/wp-content/uploads/2023/02/Vivo-X90.png?tr=q-100",
       "category": "smartphone",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2021/03/vivo-smartphones-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2021/03/vivo-smartphones-logo-0.png",
+      "descripcion":"El Vivo X90 Pro es un smartphone Android con una pantalla Full HD+ de 6.5 pulgadas. Potenciado por un procesador Snapdragon 888 de Qualcomm, el Vivo X90 Pro cuenta con 8GB de memoria RAM y 128GB de almacenamiento interno. La cámara posterior del Vivo X90 Pro es triple, de 50 MP + 13 MP + 5 MP, mientras que su cámara para selfies es de 32 MP. Completando las características del Vivo X90 Pro encontramos una batería de 4500 mAh con carga rápida, lector de huellas integrado en pantalla, parlantes stereo, sonido HiFi, y corre ColorOS 12 basado en Android 12."
     },
     {
       "id": 6,
@@ -176,7 +187,8 @@
       "price": 250,
       "image": "https://redragon.es/content/uploads/2021/07/DRAGONBORN.png",
       "category": "teclado",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion" : "El Redragon K630 es un teclado mecánico compacto 60% con interruptores mecánicos Outemu Blue (haga clic en Blue). Es más pequeño que un teclado mecánico estándar, con todas las teclas necesarias para jugar. El K552 es resistente al agua y a las salpicaduras, con un diseño de teclas flotantes. No hay un teclado numérico, lo que también significa que es ideal para viajar y usar en espacios reducidos. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar."
     },
     {
       "id": 7,
@@ -184,7 +196,8 @@
       "price": 199,
       "image": "https://redragon.es/content/uploads/2021/10/K552-RGB-BA-WHITE-SP.png",
       "category": "teclado",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion": "El Redragon K552 es un teclado mecánico compacto 60% con interruptores mecánicos Outemu Blue (haga clic en Blue). Es más pequeño que un teclado mecánico estándar, con todas las teclas necesarias para jugar. El K552 es resistente al agua y a las salpicaduras, con un diseño de teclas flotantes. No hay un teclado numérico, lo que también significa que es ideal para viajar y usar en espacios reducidos. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar."
     },
     {
       "id": 8,
@@ -192,7 +205,8 @@
       "price": 345,
       "image": "https://redragon.es/content/uploads/2021/04/HARPE-PRO.png",
       "category": "teclado",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion": "El Redragon K203A es un teclado mecánico compacto 60% con interruptores mecánicos Outemu Blue (haga clic en Blue). Es más pequeño que un teclado mecánico estándar, con todas las teclas necesarias para jugar. El K552 es resistente al agua y a las salpicaduras, con un diseño de teclas flotantes. No hay un teclado numérico, lo que también significa que es ideal para viajar y usar en espacios reducidos. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar."
     },
     {
       "id": 9,
@@ -200,7 +214,8 @@
       "price": 455,
       "image": "https://redragon.es/content/uploads/2021/04/DITI.png",
       "category": "teclado",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion": "El Redragon K585 es un teclado mecánico compacto 60% con interruptores mecánicos Outemu Blue (haga clic en Blue). Es más pequeño que un teclado mecánico estándar, con todas las teclas necesarias para jugar. El K552 es resistente al agua y a las salpicaduras, con un diseño de teclas flotantes. No hay un teclado numérico, lo que también significa que es ideal para viajar y usar en espacios reducidos. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar. El K552 tiene un diseño de teclas flotantes, lo que significa que las teclas están montadas en la parte superior del teclado y no en una placa de metal. Esto hace que el teclado sea más fácil de limpiar, ya que no hay placa de metal para quitar."
     },
     {
       "id": 11,
@@ -208,15 +223,17 @@
       "price": 799,
       "image": "https://electronicstore.com.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/3/4/34645654.png",
       "category": "procesador",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png",
+      "descripcion": "Un procesador de última generación con un rendimiento eficiente y rápido para que puedas disfrutar de tus juegos favoritos, ver películas, series, videos, navegar por Internet y realizar múltiples tareas al mismo tiempo sin problemas. ¡No esperes más y obtén el tuyo ahora!"
     },
     {
       "id": 12,
       "name": "i7-10700K 3.8GHz",
-      "price": 999,
+      "price": "890",
       "image": "https://electronicstore.com.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/1/5/1545346.png",
       "category": "procesador",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/04/intel-logo-0.png",
+      "descripcion": "Un procesador de última generación con un rendimiento eficiente y rápido para que puedas disfrutar de tus juegos favoritos, ver películas, series, videos, navegar por Internet y realizar múltiples tareas al mismo tiempo sin problemas. ¡No esperes más y obtén el tuyo ahora!"
     },
     {
       "id": 13,
@@ -224,7 +241,8 @@
       "price": 799,
       "image": "https://pcexpress.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/1/5/1536834-amd-ryzen-5-7000-series-pib-angle-1260x709.png",
       "category": "procesador",
-      "marcaImg" : "https://logospng.org/download/ryzen/ryzen-4096.png"
+      "marcaImg": "https://logospng.org/download/ryzen/ryzen-4096.png",
+      "descripcion": "Un procesador de última generación con un rendimiento eficiente y rápido para que puedas disfrutar de tus juegos favoritos, ver películas, series, videos, navegar por Internet y realizar múltiples tareas al mismo tiempo sin problemas. ¡No esperes más y obtén el tuyo ahora!"
     },
     {
       "id": 14,
@@ -232,7 +250,8 @@
       "price": 599,
       "image": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/8/981-001049_3.png",
       "category": "auriculares",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo-24.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo-24.png",
+      "descripcion": "Mouse de la marca Logitech, modelo G435 LightSpeed. Conexión inalámbrica, con un peso de 107 gramos, con una duración de batería de 18 horas. Con un sensor óptico de 16.000 dpi. Con un diseño ergonómico y con un tamaño de 12.4 x 6.8 x 4.2 cm."
     },
     {
       "id": 15,
@@ -240,7 +259,8 @@
       "price": 399,
       "image": "https://i0.wp.com/www.sispar.com.py/imagenes/70300.png?fit=1000%2C1000&ssl=1",
       "category": "auriculares",
-      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png",
+      "descripcion": "Aufifonos de la marca HyperX, modelo Cloud Flight Wireless. Conexión inalámbrica, con un peso de 299 gramos, con una duración de batería de 30 horas. Con un diseño ergonómico y con un tamaño de 19.5 x 18.5 x 8.5 cm."
     },
     {
       "id": 16,
@@ -248,7 +268,8 @@
       "price": 499,
       "image": "https://logg.api.cygnus.market/static/logg/Global/Auricular%20HyperX%20Cloud%20Stinger%20PS4/ab2d78c02fdf4915a836d13858a5d438.png",
       "category": "auriculares",
-      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png",
+      "descripcion": "Aufifonos de la marca HyperX, modelo Cloud Stinger Core. Conexión inalámbrica, con un peso de 299 gramos, con una duración de batería de 30 horas. Con un diseño ergonómico y con un tamaño de 19.5 x 18.5 x 8.5 cm."
     },
     {
       "id": 17,
@@ -256,7 +277,8 @@
       "price": 399,
       "image": "https://dlcdnwebimgs.asus.com/files/media/766FF774-FD72-4BF6-B35C-6821E1AB0322/v4/img/pd_wireless_23_01.png",
       "category": "auriculares",
-      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png",
+      "descripcion": "Aufifonos de la marca HyperX, modelo Cloud Flight Wireless. Conexión inalámbrica, con un peso de 299 gramos, con una duración de batería de 30 horas. Con un diseño ergonómico y con un tamaño de 19.5 x 18.5 x 8.5 cm."
     },
     {
       "id": 18,
@@ -264,7 +286,8 @@
       "price": 799,
       "image": "https://pcexpress.pe/media/catalog/product/cache/1/small_image/400x400/9df78eab33525d08d6e5fb8d27136e95/1/5/1536834-amd-ryzen-5-7000-series-pib-angle-1260x709.png",
       "category": "procesador",
-      "marcaImg" : "https://logospng.org/download/ryzen/ryzen-4096.png"
+      "marcaImg": "https://logospng.org/download/ryzen/ryzen-4096.png",
+      "descripcion": "Un procesador de última generación con un rendimiento eficiente y rápido para que puedas disfrutar de tus juegos favoritos, ver películas, series, videos, navegar por Internet y realizar múltiples tareas al mismo tiempo sin problemas. ¡No esperes más y obtén el tuyo ahora!"
     },
     {
       "id": 19,
@@ -272,7 +295,8 @@
       "price": 179,
       "image": "https://promart.vteximg.com.br/arquivos/ids/6836920-1000-1000/image-f8bdb643f0fc466dbf6ecbb0e8c72f2f.jpg?v=638144950337770000",
       "category": "auriculares",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion": "Aufifonos de la marca HyperX, modelo Cloud Flight Wireless. Conexión inalámbrica, con un peso de 299 gramos, con una duración de batería de 30 horas. Con un diseño ergonómico y con un tamaño de 19.5 x 18.5 x 8.5 cm."
     },
     {
       "id": 20,
@@ -280,7 +304,8 @@
       "price": 179,
       "image": "https://logitechar.vtexassets.com/arquivos/ids/157169/910-005631-1.png?v=637073544969270000",
       "category": "mouse",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo-24.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2018/03/logitech-logo-24.png",
+      "descripcion": "Mouse de la marca Logitech, modelo G403 HERO. Conexión inalámbrica, con un peso de 299 gramos, con una duración de batería de 30 horas. Con un diseño ergonómico y con un tamaño de 19.5 x 18.5 x 8.5 cm."
     },
     {
       "id": 21,
@@ -288,7 +313,8 @@
       "price": 299,
       "image": "https://res.cloudinary.com/itcity-production/image/upload/f_png,q_80,w_1000/v1652156977/products/PRD202205001339/skus/ixyg4hcimwgxe2rpy0e3.png",
       "category": "mouse",
-      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png"
+      "marcaImg": "https://1000marcas.net/wp-content/uploads/2021/05/HyperX-logo.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     },
     {
       "id": 22,
@@ -296,7 +322,8 @@
       "price": 190,
       "image": "https://oechsle.vteximg.com.br/arquivos/ids/2763135-1000-1000/image-2817de607ac24a07ae4afc8c613be33a.jpg?v=637495000107900000",
       "category": "mouse",
-      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png"
+      "marcaImg": "https://digitalife-public.sfo2.digitaloceanspaces.com/brands/432/6155ff8832717.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     },
     {
       "id": 23,
@@ -304,7 +331,8 @@
       "price": 179,
       "image": "https://dreamyshopcy.com/image/cache/catalog/dreamyshopcy/Store/All_Photos/ASUS_RogStrix_ImpactII_1-1000x1000.png",
       "category": "mouse",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     },
     {
       "id": 24,
@@ -312,7 +340,8 @@
       "price": 999,
       "image": "https://www.asus.com/media/global/products/nxI87cotd56xmqsi/P_setting_xxx_0_90_end_692.png",
       "category": "grafica",
-      "marcaImg":"https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     },
     {
       "id": 25,
@@ -320,7 +349,8 @@
       "price": 1199,
       "image": "https://www.asus.com/media/global/products/HAhTZhqAkxEtO1dV/P_setting_xxx_0_90_end_692.png",
       "category": "grafica",
-      "marcaImg":"https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/nvidia-logo-0.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     },
     {
       "id": 26,
@@ -328,7 +358,8 @@
       "price": 999,
       "image": "https://www.asus.com/media/global/products/ItDsYmA7eQYlnX99/P_setting_xxx_0_90_end_692.png",
       "category": "grafica",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     },
     {
       "id": 27,
@@ -336,7 +367,8 @@
       "price": 1199,
       "image": "https://www.asus.com/media/global/products/mzmUNAVWsuLiQmZA/P_setting_xxx_0_90_end_692.png",
       "category": "grafica",
-      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png"
+      "marcaImg": "https://logodownload.org/wp-content/uploads/2014/09/asus-logo-0.png",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor augue id elit congue, vitae consectetur erat dapibus. Nullam volutpat tristique est, vel tincidunt metus sagittis in. Mauris tristique ex et neque luctus, eu rhoncus sapien laoreet. In lacinia gravida purus sit amet pellentesque. Donec volutpat, elit sit amet ultrices dignissim, ligula lacus blandit lectus, id congue eros quam vel diam. Nullam sed scelerisque lectus, vel mattis turpis. Curabitur congue dui nunc, non pulvinar tellus consequat non. Integer eleifend sollicitudin quam, ac euismod purus tincidunt sed. Suspendisse id mauris sed urna fringilla feugiat. Aenean a leo a eros volutpat consectetur ut a enim. Quisque vel orci a magna luctus suscipit nec sit amet urna. Aliquam erat volutpat. Donec eleifend lobortis sagittis. Curabitur rutrum, justo sed pharetra interdum, ante ipsum sagittis est, a varius turpis elit et ex"
     }
   ]
 }
