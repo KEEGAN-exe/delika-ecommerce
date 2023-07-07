@@ -44,7 +44,7 @@ import EditProduct from '../components/EditProduct.astro';
 	<Login />
 </div>
 
-<div class="w-3/4 lg:w-0 transition-all duration-300 fixed top-[70px] right-0" id="updateContainer">
+<div class="w-3/4 lg:w-0 transition-all duration-300 fixed top-[70px] right-0" id="caja">
 	<EditProduct/>
 </div>
 
@@ -53,7 +53,6 @@ import EditProduct from '../components/EditProduct.astro';
 	const login = document.getElementById('login');
 	const cont = document.getElementById('cont');
 	const iniciar = document.getElementById('iniciar');
-	const prueba = document.getElementById('prueba');
 	bars.addEventListener('click', () => {
 		login.classList.toggle('w-0');
 		login.classList.toggle('w-[100%]');
@@ -68,6 +67,7 @@ import EditProduct from '../components/EditProduct.astro';
 		cont.classList.toggle('ml-[-200px]');
 	});
 
+	
 </script>
 
 

@@ -132,6 +132,7 @@ ingresar.addEventListener("click", (e) => {
         bars.classList.toggle("hidden");
         movileContainer.classList.remove("hidden");
       }
+      location.reload();
     } else {
       alerta("error", "Usuario no encontrado");
       crearUsuario.classList.add("animate-bounce");
@@ -214,6 +215,7 @@ logout.addEventListener("click", (e) => {
     bars.classList.toggle("hidden");
     movileContainer.classList.add("hidden");
   }
+  location.reload();
 });
 
 

@@ -1,19 +1,21 @@
-import { findProductById, listProduct } from "./service/product.service";
+import { findProductById, listProduct, updateProduct } from "./service/product.service";
 const nombre = document.getElementById("nombre");
 const precio = document.getElementById("precio");
 const image = document.getElementById("image");
 const categoria = document.getElementById("categoria");
 const marcaImg = document.getElementById("marcaImg");
-const close = document.getElementById("close");
 const actualizar = document.getElementById("actualizar");
 const updateContainer = document.getElementById("update-container");
 const cardContainer = document.getElementById("card-container");
+const close = document.getElementById("close");
+const caja = document.getElementById("caja");
 let producto = document.getElementById("pr");
 
 let buttonsCounter = 1;
 
 let id = 0;
 let buscarProducto;
+let idProducto
 
 if (cardContainer.innerHTML.trim() === "") {
   const message = document.createElement("h1");
@@ -49,6 +51,7 @@ producto.addEventListener("change", async () => {
     buttonsCounter = 1;
 
     dataFilter.forEach((product) => {
+      console.log(product);
       const card = document.createElement("div");
       card.classList.add(
         "bg-stone-100",
@@ -75,6 +78,7 @@ producto.addEventListener("change", async () => {
       card.appendChild(buttons);
 
       const editButton = document.createElement("div");
+      editButton.id = "btnEdit";
       editButton.classList.add(
         "bg-indigo-500",
         "rounded-full",
@@ -180,10 +184,28 @@ producto.addEventListener("change", async () => {
 
       editButton.addEventListener("click", async () => {
         const card = editButton.closest(".bg-stone-100");
-        const id = product.id;
-        console.log(id);
-        buscarProducto = await findProductById(id);
+
+        idProducto = product.id;
+        console.log(idProducto);
+        buscarProducto = await findProductById(idProducto);
         console.log(buscarProducto);
+        caja.classList.add("lg:w-1/4");
+        caja.classList.remove("lg:w-0");
+
+
+        nombre.value = buscarProducto.name;
+        precio.value = buscarProducto.price;
+        for(let i = 0; i < categoria.options.length; i++){
+          const option = categoria.options[i];
+
+          if(option.value === buscarProducto.category){
+            option.selected = true;
+            break
+          }
+
+        }
+        image.value = buscarProducto.image;
+        marcaImg.value = buscarProducto.marcaImg;
       });
 
       buttonsCounter++;
@@ -204,5 +226,15 @@ producto.addEventListener("change", async () => {
   }
 });
 
+close.addEventListener("click", () => {
+  caja.classList.remove("lg:w-1/4");
+  caja.classList.add("lg:w-0");
+});
 
-export {buscarProducto}
+actualizar.addEventListener("click", async () => {
+  console.log(idProducto, nombre.value, parseInt(precio.value), categoria.value, image.value, marcaImg.value);
+  await updateProduct(idProducto, nombre.value, precio.value, image.value, categoria.value, marcaImg.value);
+  console.log("Producto actualizado");
+})
+
+export { buscarProducto };
