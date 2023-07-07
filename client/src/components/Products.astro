@@ -5,7 +5,10 @@ import Card from "./Card.astro";
   <div class="border-b-2 border-indigo-500">
     <h1 class="font-medium mb-2 lg:text-lg text-sm dark:text-stone-50">Nuestros Productos</h1>
   </div>
-  <div class="flex items-center gap-1 hover:scale-105 transition-all duration-300">
+  <div class="flex items-center gap-3">
+    <div class="px-3 shadow-2xl py-3 bg-indigo-500 items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 text-white rounded-lg hidden" id="addProduct">
+      <i class="fa-sharp fa-solid fa-plus"></i>
+    </div>
     <select id="pr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
       <option selected>Elige un producto para filtrar</option>
       <option value="mouse">Mouses</option>

@@ -4,9 +4,9 @@ export const listProduct = async () => {
   return json
 }
 
-export const createProduct = async (id,name,price,image,category,marcaImg) => {
-  try{
-    const response = await fetch("http://localhost:3080/product" ,{
+export const createProduct = async (id, name, price, image, category, marcaImg) => {
+  try {
+    const response = await fetch("http://localhost:3080/product", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -19,22 +19,21 @@ export const createProduct = async (id,name,price,image,category,marcaImg) => {
         category,
         marcaImg
       })
-    })
+    });
 
     if (response.ok) {
       const newProduct = await response.json();
-      // agregarUsuario(newUser)
       console.log(newProduct);
-    }else{
+      return newProduct;
+    } else {
       throw new Error("Error en la solicitud HTTP: " + response.status);
     }
-
-  }
-  catch (error) {
+  } catch (error) {
     console.log(error);
-    throw new Error("Error al crear usuario: " + error.message);
+    throw new Error("Error al crear producto: " + error.message);
   }
-}
+};
+
 
 export const findProductById = async (id) => {
   const response = await fetch(`http://localhost:3080/product/${id}`)

@@ -20,10 +20,12 @@ const login = document.getElementById("login");
 const cont = document.getElementById("cont");
 const bars = document.getElementById("bars");
 const movileContainer = document.getElementById("movileContainer");
-
+const addProduct = document.getElementById("addProduct");
 
 if (localStorage.getItem("user").length > 1) {
   const list = JSON.parse(localStorage.getItem("user"));
+  addProduct.classList.remove("hidden");
+  addProduct.classList.add("flex");
   iniciar.classList.toggle("hidden");
   userContainer.classList.toggle("hidden");
   userContainer.classList.toggle("flex");
@@ -31,12 +33,13 @@ if (localStorage.getItem("user").length > 1) {
   const userIMG = list.image;
   userImage.src = userIMG;
   userAlias.innerHTML = userNombre;
-  if(window.innerWidth <= 640){
+  if (window.innerWidth <= 640) {
     bars.classList.add("hidden");
     movileContainer.classList.remove("hidden");
   }
-}if(localStorage.getItem("user").length == 0){
-  if(window.innerWidth <= 640){
+}
+if (localStorage.getItem("user").length == 0) {
+  if (window.innerWidth <= 640) {
     bars.classList.remove("hidden");
     movileContainer.classList.add("hidden");
   }
@@ -89,8 +92,6 @@ crearUsuario.addEventListener("click", () => {
   }
 });
 
-
-
 ingresar.addEventListener("click", (e) => {
   e.preventDefault();
   if (bol) {
@@ -100,6 +101,8 @@ ingresar.addEventListener("click", (e) => {
     e.preventDefault();
     if (loginUsuario) {
       alerta("success", `Bienvenido ${loginUsuario.username}`);
+      addProduct.classList.remove("hidden");
+      addProduct.classList.add("flex");
       localStorage.setItem("user", JSON.stringify(loginUsuario));
       const list = JSON.parse(localStorage.getItem("user"));
       console.log(localStorage.getItem("user").length);
@@ -128,11 +131,14 @@ ingresar.addEventListener("click", (e) => {
       cont.classList.toggle("ml-[-200px]");
       userContainer.classList.toggle("hidden");
       userContainer.classList.toggle("flex");
-      if(window.innerWidth <= 640){
+      if (window.innerWidth <= 640) {
         bars.classList.toggle("hidden");
         movileContainer.classList.remove("hidden");
       }
-      location.reload();
+      alerta("success", "Ingresando...");
+      setTimeout(() => {
+        location.reload();
+      }, 2000);
     } else {
       alerta("error", "Usuario no encontrado");
       crearUsuario.classList.add("animate-bounce");
@@ -211,13 +217,17 @@ logout.addEventListener("click", (e) => {
   userContainer.classList.toggle("hidden");
   userContainer.classList.toggle("flex");
   localStorage.setItem("user", "");
-  if(window.innerWidth <= 640){
+  addProduct.classList.add("hidden");
+  addProduct.classList.remove("flex");
+  if (window.innerWidth <= 640) {
     bars.classList.toggle("hidden");
     movileContainer.classList.add("hidden");
   }
-  location.reload();
+  alerta("success", "Sesión cerrada correctamente");
+  setTimeout(() => {
+    location.reload();
+  }, 2000);
 });
-
 
 user.addEventListener("change", () => {
   user.classList.add("dark:border-zinc-800");

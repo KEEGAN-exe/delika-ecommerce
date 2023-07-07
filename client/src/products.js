@@ -1,4 +1,10 @@
-import { findProductById, listProduct, updateProduct } from "./service/product.service";
+import { alerta } from "./login";
+import {
+  createProduct,
+  findProductById,
+  listProduct,
+  updateProduct,
+} from "./service/product.service";
 const nombre = document.getElementById("nombre");
 const precio = document.getElementById("precio");
 const image = document.getElementById("image");
@@ -9,13 +15,16 @@ const updateContainer = document.getElementById("update-container");
 const cardContainer = document.getElementById("card-container");
 const close = document.getElementById("close");
 const caja = document.getElementById("caja");
+const addProduct = document.getElementById("addProduct");
 let producto = document.getElementById("pr");
 
 let buttonsCounter = 1;
 
 let id = 0;
 let buscarProducto;
-let idProducto
+let idProducto;
+
+const info = await listProduct();
 
 if (cardContainer.innerHTML.trim() === "") {
   const message = document.createElement("h1");
@@ -191,18 +200,19 @@ producto.addEventListener("change", async () => {
         console.log(buscarProducto);
         caja.classList.add("lg:w-1/4");
         caja.classList.remove("lg:w-0");
-
+        caja.classList.add("w-3/4");
+        caja.classList.remove("w-0");
+        actualizar.innerHTML = "Actualizar";
 
         nombre.value = buscarProducto.name;
         precio.value = buscarProducto.price;
-        for(let i = 0; i < categoria.options.length; i++){
+        for (let i = 0; i < categoria.options.length; i++) {
           const option = categoria.options[i];
 
-          if(option.value === buscarProducto.category){
+          if (option.value === buscarProducto.category) {
             option.selected = true;
-            break
+            break;
           }
-
         }
         image.value = buscarProducto.image;
         marcaImg.value = buscarProducto.marcaImg;
@@ -227,14 +237,51 @@ producto.addEventListener("change", async () => {
 });
 
 close.addEventListener("click", () => {
+  caja.classList.remove("w-3/4");
+  caja.classList.add("w-0");
   caja.classList.remove("lg:w-1/4");
   caja.classList.add("lg:w-0");
 });
 
+const idMayor = Math.max(...info.map(producto => producto.id));
+console.log(idMayor)
+
 actualizar.addEventListener("click", async () => {
-  console.log(idProducto, nombre.value, parseInt(precio.value), categoria.value, image.value, marcaImg.value);
-  await updateProduct(idProducto, nombre.value, precio.value, image.value, categoria.value, marcaImg.value);
-  console.log("Producto actualizado");
-})
+  if (actualizar.innerHTML === "Actualizar") {
+    await updateProduct(
+      idProducto,
+      nombre.value,
+      precio.value,
+      image.value,
+      categoria.value,
+      marcaImg.value
+    );
+    console.log("Producto actualizado");
+  } else {
+    try {
+      const newProduct = await createProduct(
+        idMayor + 1,
+        nombre.value,
+        parseInt(precio.value),
+        image.value,
+        categoria.value,
+        marcaImg.value
+      );
+      alerta("success", "Producto agregado");
+      console.log("Producto agregado:", newProduct);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+});
+
+addProduct.addEventListener("click", () => {
+  caja.classList.add("lg:w-1/4");
+  caja.classList.remove("lg:w-0");
+  caja.classList.add("w-3/4");
+  caja.classList.remove("w-0");
+
+  actualizar.innerHTML = "Agregar";
+});
 
 export { buscarProducto };
