@@ -84,7 +84,6 @@ export const deleteProduct = async (id) => {
 
     if (response.ok) {
       const newProduct = await response.json();
-      // agregarUsuario(newUser)
       console.log(newProduct);
     }else{
       throw new Error("Error en la solicitud HTTP: " + response.status);

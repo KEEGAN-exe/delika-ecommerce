@@ -1,6 +1,8 @@
+import Swal from "sweetalert2";
 import { alerta } from "./login";
 import {
   createProduct,
+  deleteProduct,
   findProductById,
   listProduct,
   updateProduct,
@@ -190,6 +192,30 @@ producto.addEventListener("change", async () => {
       details.appendChild(priceSection);
       card.appendChild(details);
       cardContainer.appendChild(card);
+
+      deleteButton.addEventListener("click", async () => {
+        Swal.fire({
+          title: "¿Estas seguro?",
+          text: "No podras revertir esta accion",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          cancelButtonText: "Cancelar",
+          confirmButtonText: "Si, eliminar",
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            await deleteProduct(product.id);
+            Swal.fire(
+              "Eliminado",
+              "El producto ha sido eliminado correctamente",
+              "success"
+            );
+            card.remove();
+          }
+        })
+        console.log(product.id);
+      })
 
       editButton.addEventListener("click", async () => {
         const card = editButton.closest(".bg-stone-100");
