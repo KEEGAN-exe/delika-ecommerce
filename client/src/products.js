@@ -7,6 +7,7 @@ import {
   listProduct,
   updateProduct,
 } from "./service/product.service";
+import Products from "./components/Products.astro";
 const nombre = document.getElementById("nombre");
 const precio = document.getElementById("precio");
 const image = document.getElementById("image");
@@ -25,6 +26,7 @@ let buttonsCounter = 1;
 let id = 0;
 let buscarProducto;
 let idProducto;
+let idUrlProducto;
 
 const info = await listProduct();
 
@@ -184,9 +186,20 @@ producto.addEventListener("change", async () => {
         "cursor-pointer"
       );
       button.innerText = "Ver";
+      button.setAttribute("data-url", product.id);
       priceSection.appendChild(button);
-      button.addEventListener("click", () => {
-        console.log(product.id);
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const idProducto = e.target.getAttribute("data-url");
+        console.log("Detalles del producto " + idProducto,
+               "nombre:" +  product.name,
+               "precio:" + product.price,
+               "marca:" + product.marcaImg,
+               "categoria:" + product.category,
+               "descripcion:" + product.descripcion,
+               "imagen:" + product.image,
+               "logo:" + product.marcaImg
+               )
       });
 
       details.appendChild(priceSection);
@@ -310,4 +323,9 @@ addProduct.addEventListener("click", () => {
   actualizar.innerHTML = "Agregar";
 });
 
-export { buscarProducto };
+function verProducto(id) {
+  const URL = `http://localhost:3000/${encodeURIComponent(id)}`;
+  window.open(URL, "_blank");
+}
+
+export { buscarProducto};
